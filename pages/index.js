@@ -1,4 +1,10 @@
 import Head from 'next/head';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export default function Home() {
     return (
@@ -125,6 +131,7 @@ export default function Home() {
             {/* MAIN */}
 
             <main>
+
                 {/* BANNER */}
 
                 <div id="tour" className="full-banner" onClick={() => { document.getElementById("navmenu").classList.remove("open") }}>
@@ -153,11 +160,302 @@ export default function Home() {
                 <div id="produtos" className="cby-container books">
                     <div className="row">
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                            
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                        </div><br/>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                        </div><br/>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
+                            <Card style={{ width: "19%", marginRight: "1%" }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="produto"
+                                    height="140"
+                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        titulo
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        descricao
+                                    </Typography>
+                                </CardContent>
+                                <CardActions style={{marginTop: "-10%"}}>
+                                    <Button size="small">Adicionar</Button>
+                                </CardActions>
+                            </Card>
                         </div>
-
+                        
                     </div>
                 </div>
+
+                {/* ------ */}
+
                 <div className="cby-container">
                     <div className="row">
                         <div id="sl-shelfhover-container"></div>
