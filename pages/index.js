@@ -1,8 +1,12 @@
 import Head from 'next/head';
+import { ProductCard } from 'react-ui-cards';
 
 export default function Home() {
     return (
         <div className="container">
+
+            {/* CABEÇALHO */}
+
             <Head>
                 <title></title>
 
@@ -149,27 +153,19 @@ export default function Home() {
 
                 <div id="produtos" className="cby-container books">
                     <div className="row">
-
-                        <div style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                            <div className="card">
-                                <div style={{backgroundImage: "url(https://www.agrimaccari.com/en/wp-content/uploads/2015/05/girl-500x500.jpg)", backgroundSize: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", height: "100px"}}></div>
-                                <div style={{ padding: "1% 4%", width: "100%", lineHeight: "1em" }}>
-                                    <p className="fw6 f4">Title</p>
-                                    <p style={{ paddingTop: "0%" }}>
-                                        Produto
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div style={{backgroundImage: "url(https://www.agrimaccari.com/en/wp-content/uploads/2015/05/girl-500x500.jpg)", backgroundSize: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", height: "100px"}}></div>
-                                <div style={{ padding: "1% 4%", width: "100%", lineHeight: "1em" }}>
-                                    <p className="fw6 f4">Title</p>
-                                    <p style={{ paddingTop: "0%" }}>
-                                        Produto
-                                    </p>
-                                </div>
-                            </div>
-                            
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                            <ProductCard
+                                photos={[
+                                    'https://i.imgur.com/jRVDeI8.jpg',
+                                    'https://i.imgur.com/raPe27t.jpg',
+                                    'https://i.imgur.com/IpEsYSH.jpg'
+                                ]}
+                                price='$99'
+                                productName='Headphones'
+                                description='Donec lectus nulla, molestie aliquam nisl vitae, tempor placerat magna. Morbi dignissim in felis vel aliquet.'
+                                buttonText='Add to cart'
+                                url='https://github.com/nukeop'
+                            />
                         </div>
 
                     </div>
