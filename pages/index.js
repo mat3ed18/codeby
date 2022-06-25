@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { ProductCard } from 'react-ui-cards';
 
 export default function Home() {
     return (
@@ -154,18 +153,7 @@ export default function Home() {
                 <div id="produtos" className="cby-container books">
                     <div className="row">
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                            <ProductCard
-                                photos={[
-                                    'https://i.imgur.com/jRVDeI8.jpg',
-                                    'https://i.imgur.com/raPe27t.jpg',
-                                    'https://i.imgur.com/IpEsYSH.jpg'
-                                ]}
-                                price='$99'
-                                productName='Headphones'
-                                description='Donec lectus nulla, molestie aliquam nisl vitae, tempor placerat magna. Morbi dignissim in felis vel aliquet.'
-                                buttonText='Add to cart'
-                                url='https://github.com/nukeop'
-                            />
+                            
                         </div>
 
                     </div>
