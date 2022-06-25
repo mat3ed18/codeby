@@ -1,10 +1,23 @@
+import * as React from "react";
 import Head from 'next/head';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Divider from "@mui/material/Divider";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Alert from '@mui/material/Alert';
 
 export default function Home() {
     return (
@@ -116,12 +129,188 @@ export default function Home() {
                                         <span className="ttu fw6 f3">PRODUTOS</span>
                                         <p className="f4 mt4">Confira os seus produtos no carrinho</p>
                                     </div>
+                                    <List style={{ width: "100%", bgcolor: "background.paper" }}>
+                                        <ListItem alignItems="flex-start">
+                                            <ListItemAvatar>
+                                                <Avatar alt="Remy Sharp" src="https://static.clubeextra.com.br/img/uploads/1/249/619249.jpg" />
+                                            </ListItemAvatar>
+                                            <ListItemText
+                                                primary="Brunch"
+                                                secondary={
+                                                    <React.Fragment>
+                                                        <Typography
+                                                            sx={{ display: "flex" }}
+                                                            component="span"
+                                                            variant="body2"
+                                                            color="text.primary"
+                                                        >
+                                                            R$ 1,23
+                                                        </Typography>
+                                                        <b>R$ 1,11</b>
+                                                    </React.Fragment>
+                                                }
+                                            />
+                                            <ButtonGroup
+                                                size="small"
+                                                style={{ width: "40%", margin: "0%", alignSelf: "center" }}
+                                                variant="contained"
+                                            >
+                                                <IconButton>
+                                                    <RemoveIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd12").value =
+                                                                parseInt(document.getElementById("qtd12").value) > 0
+                                                                    ? parseInt(document.getElementById("qtd12").value) - 1
+                                                                    : 0;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                                <input
+                                                    type="number"
+                                                    min="0"
+                                                    id="qtd12"
+                                                    value="0"
+                                                    style={{
+                                                        width: "100%",
+                                                        padding: "2% 6%",
+                                                        fontSize: "1em",
+                                                        border: "none"
+                                                    }}
+                                                />
+                                                <IconButton>
+                                                    <AddIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd12").value =
+                                                                parseInt(document.getElementById("qtd12").value) + 1;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                            </ButtonGroup>
+                                        </ListItem>
+                                        <Divider variant="inset" component="li" />
+                                        <ListItem alignItems="flex-start">
+                                            <ListItemAvatar>
+                                                <Avatar alt="Travis Howard" src="https://static.clubeextra.com.br/img/uploads/1/415/19804415.jpg" />
+                                            </ListItemAvatar>
+                                            <ListItemText
+                                                primary="Summer BBQ"
+                                                secondary={
+                                                    <React.Fragment>
+                                                        <Typography
+                                                            sx={{ display: "flex" }}
+                                                            component="span"
+                                                            variant="body2"
+                                                            color="text.primary"
+                                                        >
+                                                            R$ 60,45
+                                                        </Typography>
+                                                        <b>R$ 58,00</b>
+                                                    </React.Fragment>
+                                                }
+                                            />
+                                            <ButtonGroup
+                                                size="small"
+                                                style={{ width: "40%", margin: "0%", alignSelf: "center" }}
+                                                variant="contained"
+                                            >
+                                                <IconButton>
+                                                    <RemoveIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd13").value =
+                                                                parseInt(document.getElementById("qtd13").value) > 0
+                                                                    ? parseInt(document.getElementById("qtd13").value) - 1
+                                                                    : 0;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                                <input
+                                                    type="number"
+                                                    min="0"
+                                                    id="qtd13"
+                                                    value="0"
+                                                    style={{
+                                                        width: "100%",
+                                                        padding: "2% 6%",
+                                                        fontSize: "1em",
+                                                        border: "none"
+                                                    }}
+                                                />
+                                                <IconButton>
+                                                    <AddIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd13").value =
+                                                                parseInt(document.getElementById("qtd13").value) + 1;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                            </ButtonGroup>
+                                        </ListItem>
+                                        <Divider variant="inset" component="li" />
+                                        <ListItem alignItems="flex-start">
+                                            <ListItemAvatar>
+                                                <Avatar alt="Cindy Baker" src="https://riomarrecife.com.br/recife/2019/07/refrigerante_coca_cola_350ml.png" />
+                                            </ListItemAvatar>
+                                            <ListItemText
+                                                primary="Oui Oui"
+                                                secondary={
+                                                    <React.Fragment>
+                                                        <Typography
+                                                            sx={{ display: "flex" }}
+                                                            component="span"
+                                                            variant="body2"
+                                                            color="text.primary"
+                                                        >
+                                                            R$ 8,00
+                                                        </Typography>
+                                                        <b>R$ 5,70</b>
+                                                    </React.Fragment>
+                                                }
+                                            />
+                                            <ButtonGroup
+                                                size="small"
+                                                style={{ width: "40%", margin: "0%", alignSelf: "center" }}
+                                                variant="contained"
+                                            >
+                                                <IconButton>
+                                                    <RemoveIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd14").value =
+                                                                parseInt(document.getElementById("qtd14").value) > 0
+                                                                    ? parseInt(document.getElementById("qtd14").value) - 1
+                                                                    : 0;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                                <input
+                                                    type="number"
+                                                    min="0"
+                                                    id="qtd14"
+                                                    value="0"
+                                                    style={{
+                                                        width: "100%",
+                                                        padding: "2% 6%",
+                                                        fontSize: "1em",
+                                                        border: "none"
+                                                    }}
+                                                />
+                                                <IconButton>
+                                                    <AddIcon
+                                                        onClick={() => {
+                                                            document.getElementById("qtd14").value =
+                                                                parseInt(document.getElementById("qtd14").value) + 1;
+                                                        }}
+                                                    />
+                                                </IconButton>
+                                            </ButtonGroup>
+                                        </ListItem>
+                                    </List>
+                                    <Alert severity="success" className="f5" style={{borderRadius: "60px", backgroundColor: "#C7FFA6", color: "#247A03", fontSize: "1.1em", fontFamily: "Poppins" }}>Parabéns, sua compra tem frete grátis!</Alert>
                                 </span>
-                                    <div>
-                                        <button className="basket_button--empty f4 fw6 pa3 white" style={{fontSize: "1.1em"}}><span>VOLTAR</span></button>
-                                        <button className="basket_button--empty f4 fw6 pa3 white" style={{backgroundColor: "#198754", fontSize: "1.1em"}}><span>CONFIRMAR</span></button>
-                                        <button className="basket_button--empty f4 fw6 pa3 white" style={{backgroundColor: "#dc3545", fontSize: "1.1em"}}><span>CANCELAR</span></button>
-                                    </div>
+                                <div className="mt4">
+                                    <button className="basket_button--empty f4 fw6 pa3 white" style={{fontSize: "1.1em"}}><span>VOLTAR</span></button>
+                                    <button className="basket_button--empty f4 fw6 pa3 white" style={{backgroundColor: "#198754", fontSize: "1.1em"}}><span>CONFIRMAR</span></button>
+                                    <button className="basket_button--empty f4 fw6 pa3 white" style={{backgroundColor: "#dc3545", fontSize: "1.1em"}}><span>CANCELAR</span></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -155,9 +344,13 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* PRODUTOS */}
+                {/* PRODUTOS */}<br/>
+                
+                <h2 id="produtos" className="main-content-title justify-center">
+                    <span style={{fontSize: "1.5em"}}>LANÇAMENTOS</span>
+                </h2>
 
-                <div id="produtos" className="cby-container books">
+                <div className="cby-container books">
                     <div className="row">
                         <div style={{ display: "flex", flexDirection: "row" }}>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -175,8 +368,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -194,8 +392,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -213,8 +416,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -232,8 +440,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -251,8 +464,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                         </div><br/>
@@ -272,8 +490,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -291,8 +514,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -310,8 +538,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -329,8 +562,13 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                             <Card style={{ width: "19%", marginRight: "1%" }}>
@@ -348,108 +586,16 @@ export default function Home() {
                                         descricao
                                     </Typography>
                                 </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
+                                <CardActions style={{marginTop: "-5%"}}>
+                                    <IconButton>
+                                        <AddShoppingCartIcon/>
+                                    </IconButton>
+                                    <IconButton>
+                                        <FavoriteBorderIcon/>
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                         </div><br/>
-                        <div style={{ display: "flex", flexDirection: "row" }}>
-                            <Card style={{ width: "19%", marginRight: "1%" }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="produto"
-                                    height="140"
-                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        titulo
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        descricao
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
-                                </CardActions>
-                            </Card>
-                            <Card style={{ width: "19%", marginRight: "1%" }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="produto"
-                                    height="140"
-                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        titulo
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        descricao
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
-                                </CardActions>
-                            </Card>
-                            <Card style={{ width: "19%", marginRight: "1%" }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="produto"
-                                    height="140"
-                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        titulo
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        descricao
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
-                                </CardActions>
-                            </Card>
-                            <Card style={{ width: "19%", marginRight: "1%" }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="produto"
-                                    height="140"
-                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        titulo
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        descricao
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
-                                </CardActions>
-                            </Card>
-                            <Card style={{ width: "19%", marginRight: "1%" }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="produto"
-                                    height="140"
-                                    image="https://via.placeholder.com/500x500/000000/FFFFFF/?text=produto1"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        titulo
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        descricao
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{marginTop: "-10%"}}>
-                                    <Button size="small">Adicionar</Button>
-                                </CardActions>
-                            </Card>
-                        </div>
                         
                     </div>
                 </div>

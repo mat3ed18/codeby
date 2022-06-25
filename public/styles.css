@@ -5,4 +5,12 @@
     width: 25%;
 }
 
+.basket__empty {
+    padding: 5% 3%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* breakpoints somente amanhã */
