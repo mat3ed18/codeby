@@ -1,0 +1,8 @@
+.card {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 25%;
+}
+
+/* breakpoints somente amanhã */
