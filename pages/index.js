@@ -25,8 +25,10 @@ export default function Home() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const ax = axios.create({ headers: { Accept: 'application/json' } });
-        ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/").then((response) => setProducts(response.data));
+        const ax = axios.create({ headers: { 
+            "Content-type": "application/json"
+        }});
+        ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search?_from=1&_to=50&O=OrderByNameASC").then((response) => setProducts(response.data));
         console.log(products.length);    
     }, []);
 
@@ -308,8 +310,6 @@ export default function Home() {
             <main>
 
                 {/* BANNER */}
-
-                vaiiii
 
                 <div id="tour" className="full-banner" onClick={() => { document.getElementById("navmenu").classList.remove("open") }}>
                     <div className="main-content" style={{ backgroundImage: `url(https://thumbs.gfycat.com/ShrillUnevenAfricancivet-size_restricted.gif)`, backgroundRepeat: "no-repeat", backgroundSize: "150%", backgroundPosition: "center" }}>
