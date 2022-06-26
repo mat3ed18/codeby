@@ -309,6 +309,8 @@ export default function Home() {
 
                 {/* BANNER */}
 
+                vaiiii
+
                 <div id="tour" className="full-banner" onClick={() => { document.getElementById("navmenu").classList.remove("open") }}>
                     <div className="main-content" style={{ backgroundImage: `url(https://thumbs.gfycat.com/ShrillUnevenAfricancivet-size_restricted.gif)`, backgroundRepeat: "no-repeat", backgroundSize: "150%", backgroundPosition: "center" }}>
                         <div className="main-content-text">
