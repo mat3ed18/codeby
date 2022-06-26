@@ -12,6 +12,7 @@
     "@mui/material": "^5.8.5",
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
     "jquery": "^3.6.0",
     "next": "latest",
     "npx": "^10.2.2",

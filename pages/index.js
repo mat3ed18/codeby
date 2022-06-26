@@ -24,12 +24,27 @@ export default function Home() {
 
     const [products, setProducts] = useState([]);
 
+    const ax = axios.create({
+        headers: { 
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'X-VTEX-API-AppKey': '20211008012102',
+            'X-VTEX-API-AppToken': '20211008012102'
+        }
+    });
+
+    ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/", {}).then((response) => console.log(response.data.length)).catch((error) => {
+        console.log(error); // Network Error
+        console.log(error.status); // undefined
+        console.log(error.code); // undefined
+    });
+    
+    // ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/", JSON.stringify({})).then((response) => {
+    //     console.log(response.data.length);
+    // });
+
     useEffect(() => {
-        const ax = axios.create({ headers: { 
-            "Content-type": "application/json"
-        }});
-        ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search?_from=1&_to=50&O=OrderByNameASC").then((response) => setProducts(response.data));
-        console.log(products.length);    
+        console.log(products);
     }, []);
 
     return (
