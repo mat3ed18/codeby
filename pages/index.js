@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Head from 'next/head';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -18,8 +18,18 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Alert from '@mui/material/Alert';
+import axios from "axios";
 
 export default function Home() {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const ax = axios.create({ headers: { Accept: 'application/json' } });
+        ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/").then((response) => setProducts(response.data));
+        console.log(products.length);    
+    }, []);
+
     return (
         <div className="container">
 
@@ -155,21 +165,17 @@ export default function Home() {
                                                 style={{ width: "40%", margin: "0%", alignSelf: "center" }}
                                                 variant="contained"
                                             >
-                                                <IconButton>
-                                                    <RemoveIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd12").value =
-                                                                parseInt(document.getElementById("qtd12").value) > 0
-                                                                    ? parseInt(document.getElementById("qtd12").value) - 1
-                                                                    : 0;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd12").value =
+                                                        parseInt(document.getElementById("qtd12").value) > 0
+                                                            ? parseInt(document.getElementById("qtd12").value) - 1
+                                                            : 0;
+                                                }}><RemoveIcon /></IconButton>
                                                 <input
                                                     type="number"
                                                     min="0"
                                                     id="qtd12"
-                                                    value="0"
+                                                    defaultValue={0}
                                                     style={{
                                                         width: "100%",
                                                         padding: "2% 6%",
@@ -177,14 +183,10 @@ export default function Home() {
                                                         border: "none"
                                                     }}
                                                 />
-                                                <IconButton>
-                                                    <AddIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd12").value =
-                                                                parseInt(document.getElementById("qtd12").value) + 1;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd12").value =
+                                                        parseInt(document.getElementById("qtd12").value) + 1;
+                                                }}><AddIcon /></IconButton>
                                             </ButtonGroup>
                                         </ListItem>
                                         <Divider variant="inset" component="li" />
@@ -213,21 +215,17 @@ export default function Home() {
                                                 style={{ width: "40%", margin: "0%", alignSelf: "center" }}
                                                 variant="contained"
                                             >
-                                                <IconButton>
-                                                    <RemoveIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd13").value =
-                                                                parseInt(document.getElementById("qtd13").value) > 0
-                                                                    ? parseInt(document.getElementById("qtd13").value) - 1
-                                                                    : 0;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd13").value =
+                                                        parseInt(document.getElementById("qtd13").value) > 0
+                                                            ? parseInt(document.getElementById("qtd13").value) - 1
+                                                            : 0;
+                                                }}><RemoveIcon /></IconButton>
                                                 <input
                                                     type="number"
                                                     min="0"
                                                     id="qtd13"
-                                                    value="0"
+                                                    defaultValue={0}
                                                     style={{
                                                         width: "100%",
                                                         padding: "2% 6%",
@@ -235,14 +233,10 @@ export default function Home() {
                                                         border: "none"
                                                     }}
                                                 />
-                                                <IconButton>
-                                                    <AddIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd13").value =
-                                                                parseInt(document.getElementById("qtd13").value) + 1;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd13").value =
+                                                        parseInt(document.getElementById("qtd13").value) + 1;
+                                                }}><AddIcon /></IconButton>
                                             </ButtonGroup>
                                         </ListItem>
                                         <Divider variant="inset" component="li" />
@@ -271,21 +265,17 @@ export default function Home() {
                                                 style={{ width: "40%", margin: "0%", alignSelf: "center" }}
                                                 variant="contained"
                                             >
-                                                <IconButton>
-                                                    <RemoveIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd14").value =
-                                                                parseInt(document.getElementById("qtd14").value) > 0
-                                                                    ? parseInt(document.getElementById("qtd14").value) - 1
-                                                                    : 0;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd14").value =
+                                                        parseInt(document.getElementById("qtd14").value) > 0
+                                                            ? parseInt(document.getElementById("qtd14").value) - 1
+                                                            : 0;
+                                                }}><RemoveIcon /></IconButton>
                                                 <input
                                                     type="number"
                                                     min="0"
                                                     id="qtd14"
-                                                    value="0"
+                                                    defaultValue={0}
                                                     style={{
                                                         width: "100%",
                                                         padding: "2% 6%",
@@ -293,14 +283,10 @@ export default function Home() {
                                                         border: "none"
                                                     }}
                                                 />
-                                                <IconButton>
-                                                    <AddIcon
-                                                        onClick={() => {
-                                                            document.getElementById("qtd14").value =
-                                                                parseInt(document.getElementById("qtd14").value) + 1;
-                                                        }}
-                                                    />
-                                                </IconButton>
+                                                <IconButton onClick={() => {
+                                                    document.getElementById("qtd14").value =
+                                                        parseInt(document.getElementById("qtd14").value) + 1;
+                                                }}><AddIcon /></IconButton>
                                             </ButtonGroup>
                                         </ListItem>
                                     </List>
@@ -331,7 +317,7 @@ export default function Home() {
                                 <span>TOUR</span>
                             </h2>
                             <p className="main-content-sub-title" style={{ lineHeight: "1.4em" }}>No techtour da codeby você é convidado a voar em nossa loja e conhecer nossos produtos</p>
-                            <a className="main-content-btn" href="#produtos">COMEÇAR</a>
+                            <a className="main-content-btn" onClick={() => teste()} href="#produtos">COMEÇAR</a>
                         </div>
                     </div>
                 </div>
@@ -349,6 +335,20 @@ export default function Home() {
                 <h2 id="produtos" className="main-content-title justify-center">
                     <span style={{fontSize: "1.5em"}}>LANÇAMENTOS</span>
                 </h2>
+                
+                <div>
+                    {
+                        
+                    }
+                </div>
+
+                <div>
+                    {/* {
+                        vtex.produtos().then((response) => {
+                            return <div>defrt</div>
+                        })
+                    } */}
+                </div>
 
                 <div className="cby-container books">
                     <div className="row">
