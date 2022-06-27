@@ -62,7 +62,7 @@ export default function Home() {
                             image={produto.items[0].images[0].imageUrl}
                         />
                         <CardContent>
-                            <Typography component="div" className="product_title mb2">
+                            <Typography component="div" className="product_title">
                                 {titleProduct(produto.productName)}
                             </Typography>
                             <Typography variant="body0" color="text.primary" className="fw6">

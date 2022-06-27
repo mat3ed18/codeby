@@ -13,10 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.product_title {
-    font-family: "Poppins";
-}
-
 .css-10hburv-MuiTypography-root {
     margin-bottom: 1%;
     font-family: "Poppins";
@@ -35,8 +31,12 @@ html {
     padding: 5%;
 }
 
-.css-yb0lig {
+.css-yb0lig, .css-9l3uo3 {
     font-family: "Poppins";
+}
+
+.css-9l3uo3 {
+    margin-bottom: 2%;
 }
 
 #totalCart .total {
