@@ -13,4 +13,28 @@ html {
     scroll-behavior: smooth;
 }
 
-/* breakpoints somente amanhã */
+.product_title {
+    font-family: "Poppins";
+}
+
+.css-10hburv-MuiTypography-root {
+    margin-bottom: 1%;
+    font-family: "Poppins";
+    width: 80%;
+}
+
+.priceItem {
+    font-family: "Poppins";
+}
+
+#totalCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.4em;
+    padding: 5%;
+}
+
+#totalCart .total {
+    font-weight: bold;
+}
