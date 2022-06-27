@@ -25,18 +25,10 @@ export default function Home() {
     const [products, setProducts] = useState([]);
 
     const ax = axios.create({
-        headers: { 
-            Accept: 'application/json',
+        headers: {
             'Content-Type': 'application/json',
-            'X-VTEX-API-AppKey': '20211008012102',
-            'X-VTEX-API-AppToken': '20211008012102'
+            'Access-Control-Allow-Origin': '*'
         }
-    });
-
-    ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/", {}).then((response) => console.log(response.data.length)).catch((error) => {
-        console.log(error); // Network Error
-        console.log(error.status); // undefined
-        console.log(error.code); // undefined
     });
     
     // ax.get("https://vtexstore.codeby.com.br/api/catalog_system/pub/products/search/", JSON.stringify({})).then((response) => {
@@ -44,7 +36,7 @@ export default function Home() {
     // });
 
     useEffect(() => {
-        console.log(products);
+        ax.get("products.json").then((response) => setProducts(response.data));
     }, []);
 
     return (
@@ -352,12 +344,6 @@ export default function Home() {
                 <h2 id="produtos" className="main-content-title justify-center">
                     <span style={{fontSize: "1.5em"}}>LANÇAMENTOS</span>
                 </h2>
-                
-                <div>
-                    {
-                        
-                    }
-                </div>
 
                 <div>
                     {/* {
