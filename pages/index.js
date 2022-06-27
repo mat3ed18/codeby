@@ -62,7 +62,7 @@ export default function Home() {
                             image={produto.items[0].images[0].imageUrl}
                         />
                         <CardContent>
-                            <Typography component="div" className="product_title">
+                            <Typography title={produto.productName} component="div" className="product_title">
                                 {titleProduct(produto.productName)}
                             </Typography>
                             <Typography variant="body0" color="text.primary" className="fw6">
@@ -138,6 +138,7 @@ export default function Home() {
                         <Avatar alt="Remy Sharp" src={item.imagem} />
                     </ListItemAvatar>
                     <ListItemText
+                        title={item.nome}
                         primary={titleProduct(item.nome)}
                         secondary={<React.Fragment>
                             <b>{real(item.valor)}</b>
