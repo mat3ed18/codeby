@@ -35,6 +35,10 @@ html {
     padding: 5%;
 }
 
+.css-yb0lig {
+    font-family: "Poppins";
+}
+
 #totalCart .total {
     font-weight: bold;
 }
