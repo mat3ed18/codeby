@@ -13,10 +13,12 @@ html {
     scroll-behavior: smooth;
 }
 
-.css-10hburv-MuiTypography-root {
+.labelItem span {
     margin-bottom: 1%;
+}
+
+.labelItem * {
     font-family: "Poppins";
-    width: 80%;
 }
 
 .priceItem {
@@ -31,20 +33,9 @@ html {
     padding: 5%;
 }
 
-.css-yb0lig, .css-9l3uo3 {
-    font-family: "Poppins";
-}
-
-.css-9l3uo3 {
-    margin-bottom: 2%;
-}
-
-.css-ahj2mt-MuiTypography-root {
+.productTitle {
     font-family: 'Poppins';
-}
-
-.css-jab4h0-MuiTypography-root {
-    line-height: 2.3em;
+    margin-bottom: 3%;
 }
 
 #totalCart .total {

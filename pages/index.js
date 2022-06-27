@@ -24,7 +24,7 @@ export default function Home() {
 
     const [products, setProducts] = useState([]);
     const [carrinho, setCarrinho] = useState([]);
-    const [listaItens, setListaItens] = useState([]);
+    const [listaItens, setListaItens] = useState([<div class="nd">Nenhum produto foi adicionado</div>]);
     const [freteGratis, setFreteGratis] = useState("none");
     const [totalCompra, setTotalCompra] = useState(0);
 
@@ -62,10 +62,10 @@ export default function Home() {
                             image={produto.items[0].images[0].imageUrl}
                         />
                         <CardContent>
-                            <Typography title={produto.productName} component="div" className="product_title">
+                            <Typography title={produto.productName} component="div" className="productTitle">
                                 {titleProduct(produto.productName)}
                             </Typography>
-                            <Typography variant="body0" color="text.primary" className="fw6">
+                            <Typography variant="body0" color="text.primary" className="price_label fw6">
                                 {real(produto.items[0].sellers[0].commertialOffer.Price)}
                             </Typography>
                         </CardContent>
@@ -93,6 +93,7 @@ export default function Home() {
     function addCart(product) {
         const cart = carrinho;
         let adiciona = true;
+        if (totalCompra == 0) setCarrinho([]);
 
         for (let i = 0; i < cart.length; i++) {
             // na API tem itens iguais, portanto ficará assim
@@ -138,6 +139,7 @@ export default function Home() {
                         <Avatar alt="Remy Sharp" src={item.imagem} />
                     </ListItemAvatar>
                     <ListItemText
+                        className="labelItem"
                         title={item.nome}
                         primary={titleProduct(item.nome)}
                         secondary={<React.Fragment>
@@ -179,9 +181,12 @@ export default function Home() {
                 <div className="total">{real(valorCompra)}</div>
             </div>
         );
+        else html.push(
+            <div class="nd">Nenhum produto foi adicionado</div>
+        );
 
         if (valorCompra > 10) setFreteGratis("flex");
-        else setFreteGratis("none");      
+        else setFreteGratis("none");
 
         setTotalCompra(valorCompra);
         setListaItens(html);
@@ -304,7 +309,7 @@ export default function Home() {
                                 <span>
                                     <div className="tc">
                                         <span className="ttu fw6 f3">PRODUTOS</span>
-                                        <p className="f4 mt4">Confira os seus produtos no carrinho</p>
+                                        <p className="f4 mt4">Confira os seus produtos</p>
                                     </div>
                                     <List style={{ width: "100%", bgcolor: "background.paper" }}>
                                         {listaItens}
