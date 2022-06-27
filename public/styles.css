@@ -39,6 +39,14 @@ html {
     margin-bottom: 2%;
 }
 
+.css-ahj2mt-MuiTypography-root {
+    font-family: 'Poppins';
+}
+
+.css-jab4h0-MuiTypography-root {
+    line-height: 2em;
+}
+
 #totalCart .total {
     font-weight: bold;
 }
