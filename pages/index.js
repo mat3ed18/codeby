@@ -24,7 +24,7 @@ export default function Home() {
 
     const [products, setProducts] = useState([]);
     const [carrinho, setCarrinho] = useState([]);
-    const [listaItens, setListaItens] = useState([<div class="nd">Nenhum produto foi adicionado</div>]);
+    const [listaItens, setListaItens] = useState([<div className="nd">Nenhum produto foi adicionado</div>]);
     const [freteGratis, setFreteGratis] = useState("none");
     const [totalCompra, setTotalCompra] = useState(0);
 
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
         );
         else html.push(
-            <div class="nd">Nenhum produto foi adicionado</div>
+            <div className="nd">Nenhum produto foi adicionado</div>
         );
 
         if (valorCompra > 10) setFreteGratis("flex");
