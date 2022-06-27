@@ -314,7 +314,7 @@ export default function Home() {
                                     <List style={{ width: "100%", bgcolor: "background.paper" }}>
                                         {listaItens}
                                     </List>
-                                    <Alert severity="success" id="alertFreteGratis" className="f5" style={{ display: freteGratis, borderRadius: "60px", backgroundColor: "#C7FFA6", color: "#247A03", fontSize: "1.1em", fontFamily: "Poppins" }}>Parabéns, sua compra tem frete grátis!</Alert>
+                                    <Alert severity="success" id="alertFreteGratis" className="f5" style={{ display: freteGratis, borderRadius: "60px", backgroundColor: "#C7FFA6", color: "#247A03", fontSize: "1em", fontFamily: "Poppins" }}>Parabéns, sua compra tem frete grátis!</Alert>
                                 </span>
                                 <div className="mt4">
                                     <button className="basket_button--empty f4 fw6 pa3 white" style={{ fontSize: "1.1em", cursor: "pointer" }}><span>VOLTAR</span></button>
