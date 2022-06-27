@@ -119,7 +119,7 @@ export default function Home() {
             if (cart[i] != null) {
                 if (cart[i].id == idProduct) cart[i].qtd = qtd;
                 if (cart[i].id == idProduct && qtd == 0) delete cart[i];
-                if (cart[i] != null) totalItens += cart[i].qtd;
+                if (cart[i] != null) totalItens += parseInt(cart[i].qtd);
             }
         }
 
