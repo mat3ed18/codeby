@@ -41,3 +41,7 @@ html {
 #totalCart .total {
     font-weight: bold;
 }
+
+.basket__wrapper {
+    overflow-y: auto;
+}
